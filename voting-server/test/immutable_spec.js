@@ -24,11 +24,17 @@ describe('immutability', () => {
     it ('is immutable', () => {
       let state = List.of('Trainspotting', '28 Days Later');
       let nextState = addMovie(state, 'Sunshine');
+      expect(nextState).to.equal(List.of(
+        'Trainspotting', 
+        '28 Days Later', 
+        'Sunshine'
+        ));
+      expect(state).to.equal(List.of(
+        'Trainspotting', 
+        '28 Days Later'
+        ));
     });
 
-    expect(nextState).to.equal(List.of('Trainspotting', '28 Days Later', 'Sunshine'));
-    // the old state would NOT have remained unchanged had we'd pushed into a regular array!
-    expect(state).to.equal(List.of('Trainspotting', '28 Days Later'));
   });
 
   describe('a tree', () => {
