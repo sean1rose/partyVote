@@ -112,6 +112,7 @@ describe('application logic', () => {
     it('creates a tally for the voted entry', () => {
       const state = Map({
         pair: List.of('Trainspotting', '28 Days Later')
+        // *** vote doesn't need entire app state -> just the vote section of state
         // vote: Map({
         //   pair: List.of('Trainspotting', '28 Days Later')
         //   // tally: 

@@ -73,11 +73,11 @@ describe('reducer', () => {
       {type: 'VOTE', entry: 'Trainspotting'},
       {type: 'NEXT'}
     ];
-    const finalState = actios.reduce(reducer, Map());
+    const finalState = actions.reduce(reducer, Map());
 
     expect(finalState).to.equal(fromJS({
       winner: 'Trainspotting'
-    }}));
+    }));
   });
 
 });
